@@ -1,0 +1,6 @@
+.projects-grid {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding : 2rem 8px;
+}

@@ -1,24 +1,35 @@
-// src/components/Projects/Projects.jsx - Template
-import './Projects.css';
+import './ProjectCard.css'
 
-function Projects() {
+function ProjectCard() {
   return (
-    <section id="projects" className="projects section">
-      <div className="container">
-        <h2 className="section-title">My Projects</h2>
-        <p className="section-subtitle">
-          Here are some of the projects I've worked on recently.
-        </p>
-        
-        {/* TODO: นักศึกษาเพิ่ม project list ที่นี่ */}
-        <div className="projects-grid">
-          <div className="project-placeholder">
-            <p>Add your projects here</p>
+    <div class="card">
+      <div class="card__hero">
+        <header class="card__hero-header">
+          <div class="card__icon">
+            
+          </div>
+        </header>
+
+        <p class="card__job-title">Senior Backend Engineer</p>
+      </div>
+
+      <footer class="card__footer">
+        <div class="card__job-summary">
+          <div class="card__job-icon">
+            <h1>H</h1>
+          </div>
+          <div class="card__job">
+            <p class="card__job-title">
+              Senior Backend <br />
+              Engineer
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+
+        <button class="card__btn">view</button>
+      </footer>
+    </div>
   );
 }
 
-export default Projects;
+export default ProjectCard;

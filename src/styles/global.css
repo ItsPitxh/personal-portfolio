@@ -45,6 +45,11 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   transition: background-color 0.3s ease, color 0.3s ease;
+  justify-content: center;
+}
+
+section { 
+  width: 100vw;
 }
 
 .App {
@@ -55,7 +60,6 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
 }
 
 .section {

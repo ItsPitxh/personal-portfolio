@@ -1,5 +1,6 @@
 // src/components/Projects/Projects.jsx - Template
 import './Projects.css';
+import ProjectCard from './ProjectCard';
 
 function Projects() {
   return (
@@ -12,9 +13,7 @@ function Projects() {
         
         {/* TODO: นักศึกษาเพิ่ม project list ที่นี่ */}
         <div className="projects-grid">
-          <div className="project-placeholder">
-            <p>Add your projects here</p>
-          </div>
+            <ProjectCard  />
         </div>
       </div>
     </section>
