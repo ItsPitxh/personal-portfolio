@@ -2,13 +2,16 @@
 .card {
   /* margin: auto; */
   width: min(300px, 100%);
-  background-color: #fefefe;
+  background-color: var(--bg-primary);
   border-radius: 1rem;
   padding: 0.5rem;
-  color: #141417;
+  color: var(--text-primary);
   z-index: 999;
-  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border-color);
 }
+
+.card 
 .card__hero {
   background-color: #fef4e2;
   border-radius: 0.5rem 0.5rem 0 0;
@@ -66,7 +69,7 @@
   text-align: center;
   padding: 0.5rem 1.25rem;
   border-radius: 1rem;
-  background-color: #141417;
+  background-color: var(--accent-primary);
   color: #fff;
   font-size: 1rem;
 }

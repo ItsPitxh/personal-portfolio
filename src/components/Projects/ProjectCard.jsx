@@ -1,32 +1,30 @@
 import './ProjectCard.css'
 
-function ProjectCard() {
+function ProjectCard({id, title, link}) {
   return (
-    <div class="card">
-      <div class="card__hero">
-        <header class="card__hero-header">
-          <div class="card__icon">
-            
+    <div className="card">
+      <div className="card__hero">
+        <header className="card__hero-header">
+          <div className="card__icon">
           </div>
         </header>
 
-        <p class="card__job-title">Senior Backend Engineer</p>
+        {/* <p class="card__job-title">Senior Backend Engineer</p> */}
       </div>
 
-      <footer class="card__footer">
-        <div class="card__job-summary">
-          <div class="card__job-icon">
-            <h1>H</h1>
+      <footer className="card__footer">
+        <div className="card__job-summary">
+          <div className="card__job-icon">
+            <h1>{id}</h1>
           </div>
-          <div class="card__job">
-            <p class="card__job-title">
-              Senior Backend <br />
-              Engineer
+          <div className="card__job">
+            <p className="card__job-title">
+              {title}
             </p>
           </div>
         </div>
 
-        <button class="card__btn">view</button>
+        <a href={link} className="card__btn">view</a>
       </footer>
     </div>
   );

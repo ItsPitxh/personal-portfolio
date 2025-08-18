@@ -10,6 +10,7 @@ function About() {
     { name: 'Problem Solving', icon: <Heart size={24} />, color: '#ef4444' }
   ];
 
+
   return (
     <section id="about" className="about section">
       <div className="container">
