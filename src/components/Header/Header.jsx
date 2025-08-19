@@ -31,7 +31,7 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <div className="logo">
-            <h2>Your Name</h2>
+            <img src="src/assets/images/logo.png" alt="" height='50px'/>
           </div>
 
           <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

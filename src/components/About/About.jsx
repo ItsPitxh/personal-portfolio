@@ -10,6 +10,7 @@ function About() {
     { name: 'Problem Solving', icon: <Heart size={24} />, color: '#ef4444' }
   ];
 
+
   return (
     <section id="about" className="about section">
       <div className="container">
@@ -51,15 +52,6 @@ function About() {
               >
                 Get In Touch
               </button>
-            </div>
-          </div>
-
-          <div className="about-image">
-            <div className="image-placeholder">
-              <div className="placeholder-content">
-                <p>Your Photo Here</p>
-                <small>Add your profile picture</small>
-              </div>
             </div>
           </div>
         </div>

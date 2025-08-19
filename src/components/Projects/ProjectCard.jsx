@@ -1,24 +1,66 @@
-// src/components/Projects/Projects.jsx - Template
-import './Projects.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
-function Projects() {
+import { Context } from "./Projects";
+
+import './ProjectCard.css'
+import { useContext } from "react";
+
+  
+
+
+
+function ProjectCard() {
+
+  const { search } = useContext(Context);
+
+ const items = [
+    {title: "Mini-Ecommerce", link: "https://github.com/MrTanapat/Mini-Ecommerce", img: 'miniecomm'},
+    {title: "Portfolio", link: "https://mrtanapat.github.io/Tanapat-portfolio-website.github.io/", img: 'portfolio'},
+    {title: "Weather App", link: "https://github.com/ItsPitxh/my-weather-app.git", img: 'weather'},
+    {title: "React Workshop", link: "https://github.com/ItsPitxh/personal-portfolio.git", img: 'react'},
+  ];
+
+
+
+  const filtered = items.filter((item) => 
+      item.title.toLowerCase().includes((search || "").toLowerCase())
+  );
+
   return (
-    <section id="projects" className="projects section">
-      <div className="container">
-        <h2 className="section-title">My Projects</h2>
-        <p className="section-subtitle">
-          Here are some of the projects I've worked on recently.
-        </p>
-        
-        {/* TODO: นักศึกษาเพิ่ม project list ที่นี่ */}
-        <div className="projects-grid">
-          <div className="project-placeholder">
-            <p>Add your projects here</p>
+    filtered.map((item, key) => (
+
+    <div 
+      className="card"
+      key={key}
+    >
+      <div className="card__hero">
+        <header className="card__hero-header">
+          <img src={`src/assets/images/${item.img}.png`} draggable="false"/>
+        </header>
+
+        {/* <p class="card__job-title">Senior Backend Engineer</p> */}
+      </div>
+
+      <footer className="card__footer">
+        <div className="card__job-summary">
+          <div className="card__job-icon">
+            <h2>
+              <FontAwesomeIcon icon={faGithub} />
+            </h2>
+          </div>
+          <div className="card__job">
+            <h3 className="card__job-title">
+              {item.title}
+            </h3>
           </div>
         </div>
-      </div>
-    </section>
+
+        <a href={item.link} target='_blank' className="card__btn">view</a>
+      </footer>
+    </div>
+    ))
   );
 }
 
-export default Projects;
+export default ProjectCard;
