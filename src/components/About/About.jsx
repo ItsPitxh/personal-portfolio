@@ -55,14 +55,14 @@ function About() {
             </div>
           </div>
 
-          <div className="about-image">
+          {/* <div className="about-image">
             <div className="image-placeholder">
               <div className="placeholder-content">
                 <p>Your Photo Here</p>
                 <small>Add your profile picture</small>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

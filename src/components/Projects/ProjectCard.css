@@ -1,37 +1,31 @@
 /* From Uiverse.io by Creatlydev */ 
 .card {
-  /* margin: auto; */
-  width: min(300px, 100%);
+  --outer-radius: 1rem;
+  --padding: 0.5rem;
+  --inner-radius: calc(var(--outer-radius) - var(--padding));
+
+  /* width: 100%; */
   background-color: var(--bg-primary);
-  border-radius: 1rem;
-  padding: 0.5rem;
+  border-radius: var(--outer-radius);
+  padding: var(--padding);
   color: var(--text-primary);
   z-index: 999;
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
+  border-radius: var(--outer-radius);
+  padding: var(--padding);
+  box-sizing: border-box;
 }
 
 .card 
 .card__hero {
-  background-color: #fef4e2;
-  border-radius: 0.5rem 0.5rem 0 0;
-  padding: 1.5rem;
-  font-size: 0.875rem;
+  border-radius: var(--inner-radius);
+  /* padding: 1.5rem; */
+
 }
-.card__hero .card__job-title {
-  margin: 2rem 0;
-  font-size: 2rem;
-  font-weight: 600;
-  padding-right: 2rem;
-}
-.card__hero-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  font-weight: 700;
+.card__hero img{
+  border-radius: 1rem;
+  width: 350px;
 }
 .card__footer {
   display: flex;
@@ -42,7 +36,7 @@
   padding: 0.75rem;
   row-gap: 1rem;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 @media (min-width: 340px) {
   .card__footer {
@@ -68,7 +62,7 @@
   cursor: pointer;
   text-align: center;
   padding: 0.5rem 1.25rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   background-color: var(--accent-primary);
   color: #fff;
   font-size: 1rem;

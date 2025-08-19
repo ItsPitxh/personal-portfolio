@@ -1,6 +1,8 @@
 /* src/components/About/About.css */
 .about {
-  background: var(--bg-secondary);
+  background: url('src/assets/images/IMG_6317.PNG');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .about-content {
