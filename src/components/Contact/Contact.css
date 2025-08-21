@@ -1,5 +1,27 @@
+.section-title{ 
+    margin-bottom: 0;
+}
 .contact {
     background: url('src/assets/images/IMG_6175 2.jpg');
     background-size: cover;
     background-position: center;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), rgba(0,0,0,0)), url("src/assets/images/IMG_6175 2.jpg") center/cover no-repeat;
 }
+
+
+.contact-placeholder {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    width: 500px;
+    box-sizing: border-box;
+
+    margin-top: 2rem;
+    padding: 1rem;
+
+    border-radius: 2rem;
+    backdrop-filter: blur(10px);
+    border:1px var(--border-color) solid;
+}
+
