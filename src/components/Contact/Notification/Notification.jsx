@@ -10,7 +10,7 @@ function Notification({isSubmit , setIsSubmit}) {
           <FontAwesomeIcon icon={faBell} />
         </span>
         <div>
-          <b>Form Subbmited!</b>
+          <b>Form Submited!</b>
           <p>Thank You, Your Name for your response. I'll reply back in a sec!</p>
         </div>
         <span className="close" onClick={() => setIsSubmit(false)}>
