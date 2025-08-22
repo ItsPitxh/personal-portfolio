@@ -9,13 +9,15 @@ Form {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
+    border: 1px solid var(--border-color);
     
     padding: 1rem;
 
     border-radius: 3rem;
-    background-color: var(--accent-primary);
+    background-color: var(--bg-primary);
     
-    color: white;
+    color: var(--text-primary);
     white-space: none;
 
 
@@ -36,7 +38,7 @@ Form {
     background: transparent;
     border: none;
     outline: none;
-    color: white;
+    color: var(--text-primary);
 
 }
 
@@ -46,8 +48,9 @@ Form {
 
     padding : 1rem;
 
+    border: 1px solid var(--border-color);
     border-radius: 1rem;
-    background-color: var(--accent-primary);
+    background-color: var(--bg-primary);
 }
 
 .textarea span {
@@ -88,4 +91,16 @@ input[type="submit"] {
 
 input[type='submit']:hover {
     background-color: var(--accent-secondary);
+}
+
+.alert{
+    border: 1px solid red;
+}
+
+.alert,
+.alert textarea,
+.alert .icon,
+.alert input,
+.alert span {
+    color: red;
 }

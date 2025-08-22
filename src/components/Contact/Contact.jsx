@@ -3,30 +3,35 @@ import './Contact.css';
 import Footer from '../Footer/Footer';
 
 import Form from './Form';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Notification from './Notification/Notification';
 
 
 function Contact() {
   const [isSubmit, setIsSubmit] = useState(false);
+  const [message, setMessage] = useState(
+    {title: "Welcome Alert", text: "Hello, welcome to my portfolio"}
+  )
+   useEffect(() => {
+     setIsSubmit(true);
+     setTimeout(() => setIsSubmit(false), 7000);
+  }, [message]);
+
   return (
     <section id="contact" className="contact section">
       <div className="container">
-        
-        {/* TODO: นักศึกษาเพิ่ม contact form ที่นี่ */}
         <div className="contact-placeholder">
         <h2 className="section-title">Get In Touch</h2>
         <p className="section-subtitle">
           Have a project in mind? Let's work together!
-
         </p>
-          <Form setIsSubmit={setIsSubmit}/>
+          <Form setIsSubmit={setIsSubmit} setMessage={setMessage}/>
         </div>
       </div>
       <Footer />
 
-      <Notification isSubmit={isSubmit} setIsSubmit={setIsSubmit}/>
+      <Notification isSubmit={isSubmit} setIsSubmit={setIsSubmit} message={message}/>
       
     </section>
   );

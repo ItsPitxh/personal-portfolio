@@ -7,18 +7,18 @@ export default function Footer() {
     return (
         <div className='footer'>
             <div className="links">
-                <a href="">
-                    <FontAwesomeIcon icon={faGithub} />
-                </a>
-                <a href="">
+                <a href="https://www.instagram.com/malimeansjasmine/" target="_blank">
                     <FontAwesomeIcon icon={faInstagram} />
                 </a>
-                <a href="">
+                <a href="https://www.facebook.com/suksumballs/" target="_blank">
                     <FontAwesomeIcon icon={faFacebook} />
                 </a>
-                <a href="">
-                    <FontAwesomeIcon icon={faLinkedin} />
+                <a href="https://github.com/ItsPitxh" target="_blank">
+                    <FontAwesomeIcon icon={faGithub} />
                 </a>
+                {/* <a href="" target="_blank">
+                    <FontAwesomeIcon icon={faLinkedin} />
+                </a> */}
 
             </div>
             <h4>•</h4>
