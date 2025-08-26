@@ -5,19 +5,11 @@ import Footer from '../Footer/Footer';
 import Form from './Form';
 import { useEffect, useState } from 'react';
 
-import Notification from './Notification/Notification';
+import Notification from '../Notification/Notification';
 
 
-function Contact() {
-  const [isSubmit, setIsSubmit] = useState(false);
-  const [message, setMessage] = useState(
-    {title: "Welcome Alert", text: "Hello, welcome to my portfolio"}
-  )
-   useEffect(() => {
-     setIsSubmit(true);
-     setTimeout(() => setIsSubmit(false), 7000);
-  }, [message]);
-
+function Contact({setMessages, count, setCount}) {
+  
   return (
     <section id="contact" className="contact section">
       <div className="container">
@@ -26,12 +18,13 @@ function Contact() {
         <p className="section-subtitle">
           Have a project in mind? Let's work together!
         </p>
-          <Form setIsSubmit={setIsSubmit} setMessage={setMessage}/>
+          {/* <Form setIsSubmit={setIsSubmit} setMessage={setMessage}/> */}
+          <Form count={count} setCount={setCount} setMessages={setMessages}/>
         </div>
       </div>
       <Footer />
 
-      <Notification isSubmit={isSubmit} setIsSubmit={setIsSubmit} message={message}/>
+      {/* <Notification isSubmit={isSubmit} setIsSubmit={setIsSubmit} message={message}/> */}
       
     </section>
   );

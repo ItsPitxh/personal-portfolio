@@ -7,7 +7,7 @@ export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     // โหลด theme จาก localStorage
     const saved = localStorage.getItem('portfolio-theme');
-    return saved || 'light';
+    return saved || 'dark';
   });
 
   useEffect(() => {

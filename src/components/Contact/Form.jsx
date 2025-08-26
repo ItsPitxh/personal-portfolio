@@ -2,35 +2,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faEnvelope,  } from '@fortawesome/free-regular-svg-icons';
 
 import './Form.css';
-import { useState } from "react";
+// import { useState } from "react";
 
-function Form({setMessage, setIsSubmit}) {
-  const [formData, setFormData] = useState({fullName : "", email: "", detail : ""});
+function Form({setMessages , count}) {
+  // const [formData, setFormData] = useState({fullName : "", email: "", detail : ""});
   
   function handleChange(e) {
-    if(!e.target.value) {
-       e.target.parentElement.classList.add("alert");
-    } else {
-       e.target.parentElement.classList.remove("alert");
-    }
-
-    setFormData({...formData, [e.target.name]: e.target.value});
+     if(!e.target.value) {
+        e.target.parentElement.classList.add("alert");
+     } else {
+        e.target.parentElement.classList.remove("alert");
+     }
   }
 
   function handleSubmit(e) {
     e.preventDefault();
-    const {fullName, email, detail} = e.target;
-    if(fullName.value != '' && email.value != '' && detail.value != '') {
-      setIsSubmit(false);
-      setMessage({title: "Form Submitted", text: `Thanks for your response, ${formData.fullName}!! I'll respond back to you shortly.`});
-      setFormData({fullName: "", email: "", detail: ""});
-    } else {
-      fullName.parentElement.classList.add("alert");
-      email.parentElement.classList.add("alert");
-      detail.parentElement.classList.add("alert");
-
+    const newMessage = e.target.fullName.value;
+    if (e.target.fullName.value == "" && e.target.email.value == "") {
+        e.target.fullName.parentElement.classList.add("alert");
+        e.target.email.parentElement.classList.add("alert");
+      return
     }
-    
+
+    setMessages(prev => [...prev, {id: count, title: "Form Submitted", text: "Thank you, " + newMessage + ". I'll reply back shortly", isShow: true}]);
+    e.target.reset();
   }
 
   
@@ -44,7 +39,7 @@ function Form({setMessage, setIsSubmit}) {
                 type="text" 
                 placeholder='Full Name...' 
                 name="fullName"
-                value={formData.fullName}
+                // value={formData.fullName}
                 onChange={handleChange}
               />
               <span>
@@ -57,7 +52,7 @@ function Form({setMessage, setIsSubmit}) {
                 type="text" 
                 placeholder='Email Address' 
                 name="email"
-                value={formData.email}
+                // value={formData.email}
                 onChange={handleChange}
               />
             </div>
@@ -72,8 +67,8 @@ function Form({setMessage, setIsSubmit}) {
                 name="detail" 
                 rows='5' 
                 placeholder='Details...'
-                value={formData.detail}
-                onChange={handleChange}
+                // value={formData.detail}
+                // onChange={handleChange}
               >
 
               </textarea>

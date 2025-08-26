@@ -25,3 +25,9 @@
     border:1px var(--border-color) solid;
 }
 
+@media (max-width: 768px) {
+  .contact-placeholder {
+    width: 100%;
+  }
+}
+
