@@ -18,7 +18,8 @@ function ProjectCard() {
     {title: "Mini-Ecommerce", link: "https://github.com/MrTanapat/Mini-Ecommerce", img: 'miniecomm'},
     {title: "Portfolio", link: "https://mrtanapat.github.io/Tanapat-portfolio-website.github.io/", img: 'portfolio'},
     {title: "Weather App", link: "https://github.com/ItsPitxh/my-weather-app.git", img: 'weather'},
-    {title: "React Workshop", link: "https://github.com/ItsPitxh/personal-portfolio.git", img: 'react'},
+    {title: "React Workshop", link: "https://github.com/ItsPitxh/react-workshop.git", img: 'react'},
+    {title: "This Project", link: "https://github.com/ItsPitxh/personal-portfolio.git", img: 'this'},
   ];
 
 

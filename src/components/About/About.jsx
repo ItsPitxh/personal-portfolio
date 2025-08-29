@@ -1,5 +1,6 @@
 // src/components/About/About.jsx
 import { Code, Palette, Zap, Heart } from 'lucide-react';
+import Footer from '../Footer/Footer';
 import './About.css';
 
 function About() {

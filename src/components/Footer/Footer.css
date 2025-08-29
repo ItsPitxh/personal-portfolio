@@ -1,0 +1,28 @@
+.footer {
+    height: 100px;
+    width: 100vw;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.footer .links {
+    display: flex;
+    gap: 1rem;
+}
+.footer a {
+    font-size: 2rem;
+    color: var(--text-primary);
+    gap: 1rem;
+}
+
+.footer a:hover {
+    transform: translateY(-4px);
+    transition: all 0.3s ease;
+}
+
+.footer h2 {
+    font-weight: normal;
+}

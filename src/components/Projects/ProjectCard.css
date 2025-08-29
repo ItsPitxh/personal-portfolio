@@ -9,12 +9,12 @@
   border-radius: var(--outer-radius);
   padding: var(--padding);
   color: var(--text-primary);
-  z-index: 999;
   box-shadow: var(--shadow);
   border: 1px solid var(--border-color);
   border-radius: var(--outer-radius);
   padding: var(--padding);
   box-sizing: border-box;
+  height: fit-content;
 }
 
 .card 
